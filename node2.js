@@ -10,3 +10,8 @@ console.log(`Total  Memory: ${os.totalmem()}`)
 const fs = require('fs')
 const files = fs.readdirSync('./') // sync -- bad!!!!
 console.log(files)
+
+fs.readdir(__dirname, (err, files) => {
+    if (err) console.log(`Error ${err}`)
+    else console.log(`Files ${files}`)
+ })
